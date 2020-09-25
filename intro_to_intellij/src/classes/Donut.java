@@ -9,7 +9,7 @@ public class Donut
     //default constructor...
     public Donut()
     {
-        tasty = true;
+        tasty = false;
         flavor = "Bismark";
         filled = true;
     }
@@ -21,4 +21,59 @@ public class Donut
         this.flavor = flavor;
         this.filled = filled;
     }
+
+    //getters (accessors)
+    public boolean isTasty()
+    {
+        return tasty;
+    }
+
+    public String getFlavor()
+    {
+        return flavor;
+    }
+
+    public boolean isFilled()
+    {
+        return filled;
+    }
+
+    //setters (mutators)
+    public void setTasty(boolean tasty)
+    {
+        this.tasty = tasty;
+    }
+
+    public void setFlavor(String flavor)
+    {
+        //ignore bad flavors...
+        if (!flavor.equals(""))
+        {
+            this.flavor = flavor;
+        }
+    }
+
+    public void setFilled(boolean filled)
+    {
+        this.filled = filled;
+    }
+
+    @Override
+    public String toString()
+    {
+        String tastyString = tasty ? "tasty " : "";
+
+        String output = "A " + tastyString + flavor + " donut";
+        return output;
+    }
 }
+
+
+
+
+
+
+
+
+
+
