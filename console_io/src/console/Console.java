@@ -8,13 +8,12 @@ public class Console
 
     public static int readInt(String prompt)
     {
-        //prompt, read, and clear the scanner
         System.out.print(prompt);
 
-        int result = 0; //assign a placeholder value
+        int result = 0;
         while (!scanner.hasNextInt())
         {
-            System.out.print("Please enter a valid number: ");
+            System.out.print("Please enter a valid integer: ");
             scanner.nextLine(); //clear the scanner
         }
 
@@ -26,19 +25,36 @@ public class Console
 
     public static boolean readBoolean(String prompt)
     {
-        //prompt, read, and clear the scanner
         System.out.print(prompt);
-        boolean result = scanner.nextBoolean();
+
+        boolean result = false;
+        while (!scanner.hasNextBoolean())
+        {
+            System.out.print("Please enter a valid boolean: ");
+            scanner.nextLine(); //clear the scanner
+        }
+
+        result = scanner.nextBoolean();
         scanner.nextLine(); //clear the scanner
+
         return result;
     }
 
     public static double readDouble(String prompt)
     {
-        //prompt, read, and clear the scanner
+
         System.out.print(prompt);
-        double result = scanner.nextDouble();
+
+        double result = 0.0;
+        while (!scanner.hasNextDouble())
+        {
+            System.out.print("Please enter a valid decimal: ");
+            scanner.nextLine(); //clear the scanner
+        }
+
+        result = scanner.nextDouble();
         scanner.nextLine(); //clear the scanner
+
         return result;
     }
 
