@@ -1,10 +1,11 @@
 package grouping.things;
 
+import grouping.shared_types.Burnable;
 import grouping.shared_types.Valuable;
 
 import java.time.LocalDate;
 
-public class PaperBill implements Valuable
+public class PaperBill implements Valuable, Burnable
 {
     private LocalDate dateIssued;
     private double value;
@@ -19,6 +20,12 @@ public class PaperBill implements Valuable
     public double calculateValue()
     {
         return value;
+    }
+
+    @Override
+    public void burn()
+    {
+        System.out.println("You burned the " + value + " dollar bill");
     }
 
     @Override

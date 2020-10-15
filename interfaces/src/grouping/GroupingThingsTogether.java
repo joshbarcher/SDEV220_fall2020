@@ -1,9 +1,11 @@
 package grouping;
 
+import grouping.shared_types.Burnable;
 import grouping.shared_types.Randomizable;
 import grouping.shared_types.Valuable;
 import grouping.things.Coin;
 import grouping.things.Dice;
+import grouping.things.Ladder;
 import grouping.things.PaperBill;
 import introduction.animals.Dog;
 
@@ -26,12 +28,22 @@ public class GroupingThingsTogether
             new Dice(10, Color.WHITE)
         };
 
+        PaperBill twentyDollars = new PaperBill(LocalDate.of(2010, 10, 1), 20.0);
+        PaperBill oneDollar = new PaperBill(LocalDate.of(2005, 1, 1), 1.0);
+
         Valuable[] valuables = {
             penny,
             nickel,
             quarter,
-            new PaperBill(LocalDate.of(2010, 10, 1), 20.0),
-            new PaperBill(LocalDate.of(2005, 1, 1), 1.0)
+            twentyDollars,
+            oneDollar
+        };
+
+        Burnable[] burnables = {
+            twentyDollars,
+            oneDollar,
+            new Ladder(10),
+            new Ladder(3)
         };
 
         for (int i = 0; i < randomizables.length; i++)
@@ -44,6 +56,13 @@ public class GroupingThingsTogether
         for (int i = 0; i < valuables.length; i++)
         {
             System.out.println(valuables[i].calculateValue());
+        }
+        System.out.println();
+
+        for (int i = 0; i < burnables.length; i++)
+        {
+            burnables[i].burn();
+            System.out.println(burnables[i]);
         }
     }
 
