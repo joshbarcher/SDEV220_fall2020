@@ -1,4 +1,4 @@
-package grouping;
+package grouping.shared_types;
 
 public interface Randomizable
 {

@@ -1,4 +1,6 @@
-package grouping;
+package grouping.things;
+
+import grouping.shared_types.Randomizable;
 
 import java.awt.*;
 import java.util.Random;
