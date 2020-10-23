@@ -64,7 +64,7 @@ public class GroupingThingsTogether
             burnables[i].burn();
             System.out.println(burnables[i]);
         }
-    }
+    }-
 
     public static void groupingByInterface()
     {

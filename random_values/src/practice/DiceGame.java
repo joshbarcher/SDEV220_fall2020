@@ -5,6 +5,7 @@ import java.util.Random;
 public class DiceGame
 {
     private static Random random = new Random();
+    private static int num;
 
     public static void main(String[] args)
     {
