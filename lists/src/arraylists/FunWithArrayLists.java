@@ -2,10 +2,31 @@ package arraylists;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class FunWithArrayLists
 {
     public static void main(String[] args)
+    {
+        List<Integer> numsList = new LinkedList<>();
+
+        //put the numbers 1, 2, 3, ... , 10 into the list
+        for (int i = 1; i <= 1000000; i++)
+        {
+            numsList.add(i);
+        }
+
+        for (int i = numsList.size() - 1; i >= 0; i--)
+        {
+            numsList.remove(i);
+        }
+
+        System.out.println(numsList.size());
+        System.out.println(numsList.isEmpty());
+    }
+
+    private static void removing()
     {
         ArrayList<String> listOfBooks = new ArrayList<>();
 
