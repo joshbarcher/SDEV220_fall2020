@@ -39,6 +39,25 @@ public class LinkedList
         }
     }
 
+    public void printList()
+    {
+        //print out elements with the format A, B, C, D using a loop
+        Node current = head;
+        while (current.next != null)
+        {
+            //print out the current element
+            System.out.println(current.data);
+
+            //move to the next node
+            current = current.next;
+        }
+    }
+
+    public int size()
+    {
+        return 0;
+    }
+
     private static class Node
     {
         private Object data;

@@ -10,5 +10,9 @@ public class TestingOurLL
         list.add('B');
         list.add('C');
         list.add('D');
+        list.add('E');
+        list.add('F');
+
+        list.printList();
     }
 }
