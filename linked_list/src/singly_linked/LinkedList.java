@@ -43,7 +43,7 @@ public class LinkedList
     {
         //print out elements with the format A, B, C, D using a loop
         Node current = head;
-        while (current.next != null)
+        while (current != null)
         {
             //print out the current element
             System.out.println(current.data);
@@ -55,7 +55,20 @@ public class LinkedList
 
     public int size()
     {
-        return 0;
+        return size;
+    }
+
+    //returns true if there are no nodes in the LL, otherwise false
+    public boolean isEmpty()
+    {
+        return false;
+    }
+
+    //will return true if element is found in a node in the LL,
+    //otherwise it returns false
+    public boolean contains(Object element)
+    {
+        return false;
     }
 
     private static class Node
@@ -72,6 +85,12 @@ public class LinkedList
         {
             this.data = data;
             this.next = next;
+        }
+
+        @Override
+        public String toString()
+        {
+            return data.toString();
         }
     }
 }
