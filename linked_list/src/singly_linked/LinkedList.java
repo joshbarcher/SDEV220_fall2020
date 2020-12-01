@@ -21,7 +21,7 @@ public class LinkedList
         //is the list empty?
         if (head == null)
         {
-            head = tail = new Node(newElement);
+            head /*= tail */ = new Node(newElement);
             size = 1;
         }
         else
