@@ -6,6 +6,20 @@ public class TestingOurLL
     {
         LinkedList list = new LinkedList();
 
+        System.out.println("Created the list");
+
+        for (int i = 1; i <= 1000000; i++)
+        {
+            list.add(i);
+        }
+
+        System.out.println("Added 1,000,000 numbers");
+    }
+
+    private static void funWithLL()
+    {
+        LinkedList list = new LinkedList();
+
         System.out.println("Size: " + list.size());
 
         list.add('A');

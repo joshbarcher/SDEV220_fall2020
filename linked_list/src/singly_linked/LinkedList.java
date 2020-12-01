@@ -4,6 +4,7 @@ public class LinkedList
 {
     //fields
     private Node head;
+    /*private Node tail;*/
     private int size;
 
     //constructors
@@ -20,7 +21,7 @@ public class LinkedList
         //is the list empty?
         if (head == null)
         {
-            head = new Node(newElement);
+            head = tail = new Node(newElement);
             size = 1;
         }
         else
@@ -35,6 +36,9 @@ public class LinkedList
 
             //add the new Node to the end of the list
             current.next = new Node(newElement);
+
+            /*tail.next = new Node(newElement);
+            tail = tail.next;*/
             size++;
         }
     }
