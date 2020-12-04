@@ -15,12 +15,19 @@ public class RecursionPractice
         //printDownToOne(4);
 
         //text our sum method
-        int result = sum(3); //6
+        int result = sum(10); //6
         System.out.println(result);
     }
 
+    //sum of the first n positive integers
     public static int sum(int num)
     {
+        //check for bad inputs
+        if (num <= 0)
+        {
+            throw new IllegalArgumentException("Bad input num given");
+        }
+
         //base case
         if (num == 1)
         {
@@ -28,8 +35,7 @@ public class RecursionPractice
         }
         else
         {
-            int sumSoFar = sum(num - 1) + num;
-            return sumSoFar;
+            return sum(num - 1) + num;
         }
     }
 
@@ -43,7 +49,7 @@ public class RecursionPractice
         }
         else
         {
-            //then recurse
+            //then recurse, and approach the base
             printDownToOne(num - 1);
 
             //print the number
